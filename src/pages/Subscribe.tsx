@@ -1,6 +1,5 @@
 import { Logo } from "@/components/Header/Logo";
 import { useCreateSubscriberMutation } from "@/graphql/generated";
-import { gql, useMutation } from "@apollo/client";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
