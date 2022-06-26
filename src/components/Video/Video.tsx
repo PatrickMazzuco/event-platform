@@ -30,8 +30,8 @@ export const Video = ({ lessonSlug }: VideoProps) => {
 
   return (
     <div className="flex-1">
-      <div className="bg-black flex justify-center">
-        <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+      <div className="flex justify-center bg-black">
+        <div className="aspect-video w-full max-w-[1100px] h-full max-h-[60vh]">
           <Player>
             <Youtube videoId={lesson.videoId} />
             <DefaultUi />
@@ -39,27 +39,27 @@ export const Video = ({ lessonSlug }: VideoProps) => {
         </div>
       </div>
 
-      <div className="p-8 max-w-[1100px] mx-auto">
-        <div className="flex items-start gap-16">
+      <div className="p-8 mx-auto max-w-[1100px]">
+        <div className="flex gap-16 items-start">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">{lesson.title}</h1>
-            <p className="mt-4 text-gray-200 leading-relaxed">
+            <p className="mt-4 leading-relaxed text-gray-200">
               {lesson.description}
             </p>
 
             {lesson.teacher && (
-              <div className="flex items-center gap-4 mt-6">
+              <div className="flex gap-4 items-center mt-6">
                 <img
-                  className="h-16 w-16 rounded-full border-2 border-blue-500"
+                  className="w-16 h-16 rounded-full border-2 border-blue-500"
                   src={lesson.teacher.avatarURL}
                   alt="lesson teacher"
                 />
 
                 <div className="leading-relaxed">
-                  <strong className="font-bold text-2xl block">
+                  <strong className="block text-2xl font-bold">
                     {lesson.teacher.name}
                   </strong>
-                  <span className="text-gray-200 text-sm block ">
+                  <span className="block text-sm text-gray-200 ">
                     {lesson.teacher.bio}
                   </span>
                 </div>
@@ -69,7 +69,7 @@ export const Video = ({ lessonSlug }: VideoProps) => {
           <div className="flex flex-col gap-4">
             <a
               href="#"
-              className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors"
+              className="flex gap-2 justify-center items-center p-4 text-sm font-bold uppercase bg-green-500 hover:bg-green-700 rounded transition-colors"
             >
               <DiscordLogo size={24} />
               Comunidade do Discord
@@ -77,47 +77,47 @@ export const Video = ({ lessonSlug }: VideoProps) => {
 
             <a
               href="#"
-              className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors"
+              className="flex gap-2 justify-center items-center p-4 text-sm font-bold text-blue-500 hover:text-gray-900 uppercase hover:bg-blue-500 rounded border border-blue-500 transition-colors"
             >
               <Lightning size={24} />
               Acesse o desafio
             </a>
           </div>
         </div>
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-8 mt-20">
           <a
             href="#"
-            className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
+            className="flex overflow-hidden gap-6 items-stretch bg-gray-700 hover:bg-gray-600 rounded transition-colors"
           >
-            <div className="bg-green-700 h-full p-6 flex items-center">
+            <div className="flex items-center p-6 h-full bg-green-700">
               <FileArrowDown size={40} />
             </div>
             <div className="py-6 leading-relaxed">
               <strong className="text-2xl">Material Complementar</strong>
-              <p className="text-sm text-gray-200 mt-2">
+              <p className="mt-2 text-sm text-gray-200">
                 Acesse o material complementar para acelerar o seu
                 desenvolvimento
               </p>
             </div>
-            <div className="h-full p-6 flex items-center">
+            <div className="flex items-center p-6 h-full">
               <CaretRight size={20} />
             </div>
           </a>
           <a
             href="#"
-            className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
+            className="flex overflow-hidden gap-6 items-stretch bg-gray-700 hover:bg-gray-600 rounded transition-colors"
           >
-            <div className="bg-green-700 h-full p-6 flex items-center">
+            <div className="flex items-center p-6 h-full bg-green-700">
               <FileArrowDown size={40} />
             </div>
             <div className="py-6 leading-relaxed">
               <strong className="text-2xl">Wallpapers</strong>
-              <p className="text-sm text-gray-200 mt-2">
+              <p className="mt-2 text-sm text-gray-200">
                 Baixe wallpapers exclusivos da Maratona Explorer e personalize a
                 sua máquina
               </p>
             </div>
-            <div className="h-full p-6 flex items-center">
+            <div className="flex items-center p-6 h-full">
               <CaretRight size={20} />
             </div>
           </a>

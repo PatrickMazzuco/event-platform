@@ -26,46 +26,46 @@ export const Lesson = ({ title, slug, type, availableAt }: LessonProps) => {
       <span className="text-gray-300">{formattedDate}</span>
       <div
         className={classnames(
-          "rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 transition-colors",
+          "p-4 mt-2 rounded border border-gray-500 group-hover:border-green-500 transition-colors",
           {
             "bg-green-500": isActiveLesson,
-          }
+          },
         )}
       >
-        <header className="flex items-center justify-between">
+        <header className="flex justify-between items-center">
           {isLessonAvailable ? (
             <span
               className={classnames(
-                "text-sm  font-medium flex items-center gap-2",
+                "flex  gap-2 items-center text-sm font-medium",
                 {
                   "text-white": isActiveLesson,
                   "text-blue-500": isActiveLesson,
-                }
+                },
               )}
             >
               <CheckCircle size={20} />
               Conteúdo liberado
             </span>
           ) : (
-            <span className="text-sm text-orange-500 font-medium flex items-center gap-2">
+            <span className="flex gap-2 items-center text-sm font-medium text-orange-500">
               <Lock size={20} />
               Em breve
             </span>
           )}
           <span
             className={classnames(
-              "text-xs rounded px-2 py-[0.125rem] text-white border font-bold",
+              "py-[0.125rem] px-2 text-xs font-bold text-white rounded border",
               {
                 "border-white": isActiveLesson,
                 "border-green-300": !isActiveLesson,
-              }
+              },
             )}
           >
             {type === "live" ? "AO VIVO" : "AULA PRÁTICA"}
           </span>
         </header>
         <strong
-          className={classnames("mt-5 block", {
+          className={classnames("block mt-5", {
             "text-white": isActiveLesson,
             "text-gray-200 ": !isActiveLesson,
           })}
