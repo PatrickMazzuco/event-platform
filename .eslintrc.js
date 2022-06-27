@@ -84,6 +84,8 @@ module.exports = {
     "import/prefer-default-export": "off",
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "react/require-default-props": "off",
     "react/jsx-filename-extension": [
       "error",
       {

@@ -22,22 +22,22 @@ export const Subscribe = () => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-no-repeat bg-cover bg-blur">
-      <div className=" flex justify-between items-center mx-auto mt-20 w-full max-w-[1100px]">
-        <div className="max-w-[640px]">
+    <div className="flex flex-col items-center min-h-screen bg-no-repeat bg-cover bg-blur sm:px-4 lg:px-8">
+      <div className=" flex flex-col justify-center items-center mx-8 mt-20 w-full max-w-[1216px] sm:flex-row lg:justify-between lg:mx-auto">
+        <div className="flex flex-col items-center px-6 text-center sm:items-start sm:max-w-sm sm:text-left md:max-w-md lg:min-w-[640px]">
           <Logo />
-          <h1 className="mt-8 text-[2.5rem] leading-tight">
+          <h1 className="mt-8 text-[1.875rem] leading-tight  sm:text-[2.5rem] ">
             Construa uma{" "}
             <strong className="text-blue-500">aplicação completa</strong>, do
             zero, com <strong className="text-blue-500">React</strong>
           </h1>
-          <p className="mt-4 leading-relaxed text-gray-200">
+          <p className="mt-4 text-sm leading-relaxed  text-gray-200 sm:text-base">
             Em apenas uma semana você vai dominar na prática uma das tecnologias
             mais utilizadas e com alta demanda para acessar as melhores
             oportunidades do mercado.
           </p>
         </div>
-        <div className="p-8 bg-gray-700  rounded border border-gray-500">
+        <div className="py-8 px-6 mt-8 w-full bg-gray-700 rounded border border-gray-500 sm:p-8 sm:mt-0 sm:w-auto">
           <strong className="block mb-6 text-2xl">
             Inscreva-se gratuitamente
           </strong>
@@ -69,7 +69,7 @@ export const Subscribe = () => {
           </form>
         </div>
       </div>
-      <img src="/src/assets/code-mockup.png" alt="" className="mt-10" />
+      <img src="/src/assets/code-mockup.png" alt="" className="mt-4 sm:mt-10" />
     </div>
   );
 };
